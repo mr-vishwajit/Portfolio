@@ -9,8 +9,10 @@ import {
   Sparkles, 
   Briefcase, 
   Mail, 
-  Check 
+  Check,
+  Smartphone
 } from 'lucide-react';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface NavbarProps {
   language: Language;
@@ -107,9 +109,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             ))}
           </nav>
 
-          {/* Zone 3: Primary actions (Language toggle, Resume CTA, 3-Line Menu Toggle) */}
+          {/* Zone 3: Primary actions (Install App CTA, Language toggle, Resume CTA, 3-Line Menu Toggle) */}
           <div className="flex items-center gap-2 sm:gap-3">
             
+            {/* Direct PWA Install App Button */}
+            <div className="hidden xs:block">
+              <PWAInstallButton language={language} variant="navbar" />
+            </div>
+
             {/* Language Toggle */}
             <button
               onClick={onToggleLanguage}
@@ -186,6 +193,11 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <X className="w-3.5 h-3.5 stroke-[2.5]" />
                 <span>{language === 'en' ? 'Close' : 'बंद करें'}</span>
               </button>
+            </div>
+
+            {/* Install App CTA inside 3-Line menu */}
+            <div>
+              <PWAInstallButton language={language} variant="drawer" />
             </div>
 
             {/* Vertical Stacked Navigation Options (ऊपर-नीचे) */}
@@ -286,6 +298,3 @@ export const Navbar: React.FC<NavbarProps> = ({
     </>
   );
 };
-
-
-

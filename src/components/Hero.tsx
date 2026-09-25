@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Language } from '../types';
 import { personalInfo } from '../data/portfolioData';
 import profilePhoto from '../assets/images/profile_photo_1790327770400.jpg';
+import { PWAInstallButton } from './PWAInstallButton';
 import { 
   ArrowRight, 
   FileText, 
@@ -173,6 +174,8 @@ export const Hero: React.FC<HeroProps> = ({
                 <FileText className="w-4 h-4" />
                 <span>{language === 'en' ? 'View Resume' : 'रेज़्यूमे देखें'}</span>
               </button>
+
+              <PWAInstallButton language={language} variant="compact" />
             </div>
 
             {/* Quick KPI Stat Counter Strip */}

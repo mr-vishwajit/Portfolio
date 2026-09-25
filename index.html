@@ -2,21 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Vishwajit | Data Analyst Portfolio</title>
     <meta name="description" content="Professional Data Analyst portfolio of Vishwajit, specializing in SQL, Power BI, Excel, and Google Sheets for data-driven business insights." />
+    
+    <!-- PWA & Mobile App Meta Tags -->
+    <meta name="theme-color" content="#020617" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Vishwajit" />
+    <meta name="application-name" content="Vishwajit" />
+    <meta name="msapplication-TileColor" content="#020617" />
+
+    <!-- OpenGraph & Twitter -->
     <meta property="og:title" content="Vishwajit | Data Analyst Portfolio" />
     <meta property="og:description" content="Professional Data Analyst portfolio of Vishwajit, specializing in SQL, Power BI, Excel, and Google Sheets for data-driven business insights." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="keywords" content="Vishwajit, Data Analyst, SQL, Power BI, Excel, Google Sheets, Portfolio, Data Visualization, Business Intelligence" />
+    <meta name="keywords" content="Vishwajit, Data Analyst, SQL, Power BI, Excel, Google Sheets, Portfolio, Data Visualization, Business Intelligence, Progressive Web App, PWA" />
+    
+    <!-- App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-teal-500/20 selection:text-teal-300">
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-teal-500/20 selection:text-teal-300 min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

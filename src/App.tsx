@@ -15,6 +15,8 @@ import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
 import { PlaceholdersGuideModal } from './components/PlaceholdersGuideModal';
 import { AdminCustomizerModal } from './components/AdminCustomizerModal';
+import { PWAInstallBanner } from './components/PWAInstallBanner';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('en');
@@ -57,7 +59,7 @@ export default function App() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-teal-500/20 selection:text-teal-300">
       
-      {/* 4-Tab Streamlined Navigation Bar + 3-Dot Key Protected Customizer */}
+      {/* 4-Tab Streamlined Navigation Bar + Install App CTA + 3-Line Key Customizer */}
       <Navbar
         language={language}
         onToggleLanguage={toggleLanguage}
@@ -96,6 +98,12 @@ export default function App() {
         onOpenGuideModal={() => setGuideModalOpen(true)} 
       />
 
+      {/* Offline Status Toast Indicator */}
+      <OfflineIndicator language={language} />
+
+      {/* Floating 1-Click App Install Banner */}
+      <PWAInstallBanner language={language} />
+
       {/* Resume Digital Sheet & PDF Print Modal */}
       <ResumeModal
         isOpen={resumeModalOpen}
@@ -112,7 +120,7 @@ export default function App() {
         language={language}
       />
 
-      {/* 3-Dot Key Protected Website Master Customizer & Photo Manager */}
+      {/* 3-Line Key Protected Website Master Customizer & Photo Manager */}
       <AdminCustomizerModal
         isOpen={adminModalOpen}
         onClose={() => setAdminModalOpen(false)}
@@ -126,4 +134,3 @@ export default function App() {
     </div>
   );
 }
-
